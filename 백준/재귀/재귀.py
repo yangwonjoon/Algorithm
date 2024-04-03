@@ -7,7 +7,7 @@ def sum(n):
 
     return n + sum(n-1)
 
-print(sum(10))
+print(sum(5))
 
 #피보나치 수열 재귀로 만들어보자 -> 원래는 반복문이랑 캐시를 만들어야함
 #n과 m 만들어보기

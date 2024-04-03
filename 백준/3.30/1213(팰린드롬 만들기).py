@@ -1,22 +1,31 @@
 #짝수면 AABB -> ABBA
 #홀수면 
 
-n = list(input())
-word_list = sorted(n)
-word_list_l = len(word_list)
+import collections
 
-first = ''
-second = ''
+word = input()
+check_word = collections.Counter(word)
 
-# for i in range(0, word_list_l ,2):
-#     if(word_list[i] == word_list[i]):
-#         first += word_list[i]
-#         second += word_list[i+1]
-#     else:
-        
-    
+count = 0
+result = ''
+mid = ''
 
-# print(first+second[::-1])
+#홀수 2개일때
+for key, value in list(check_word.items()):
+    if value % 2 == 1:
+        count += 1
+        mid = key
+
+        if count >= 2: 
+            print("I'm Sorry Hansoo")
+            exit()
+
+#반짜른거
+for key, value in sorted(check_word.items()): 
+    result += (key * (value // 2)) 
+
+print(result + mid + result[::-1])
+
 
 
     

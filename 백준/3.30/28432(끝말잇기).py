@@ -9,7 +9,6 @@ word_N_set = set(word_N)
 M = int(sys.stdin.readline())
 word_M =[sys.stdin.readline().strip() for i in range(M)]
 word_M_set = set(word_M)
-#word_M에서 word_N과 겹치는 골목 제거
 word_M = list(word_M_set-word_N_set)
 
 result = ''
